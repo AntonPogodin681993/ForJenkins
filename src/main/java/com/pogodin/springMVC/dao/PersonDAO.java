@@ -16,7 +16,7 @@ public class PersonDAO {
 
         people.add(new Person(++PEOPLE_COUNT,"Mike"));
         people.add(new Person(++PEOPLE_COUNT,"Victor"));
-        people.add(new Person(++PEOPLE_COUNT,"Tim"));
+        people.add(new Person(++PEOPLE_COUNT,"Igor"));
         people.add(new Person(++PEOPLE_COUNT,"Marry"));
     }
 
