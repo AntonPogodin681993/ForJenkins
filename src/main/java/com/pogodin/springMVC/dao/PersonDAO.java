@@ -9,9 +9,9 @@ import java.util.List;
 
 @Component
 public class PersonDAO {
-    private static int PEOPLE_COUNT;
 
-    private static final String URL = "jdbc:postgresql://localhost:5432/first_db";
+
+    private static final String URL = "jdbc:postgresql://192.168.0.102:5432/first_db";
     private static final String USERNAME = "postgres";
     private  static final String PASSWORD = "123456";
 
@@ -118,8 +118,7 @@ public class PersonDAO {
     }
 
     public void delete(int id){
-        PreparedStatement preparedStatement =
-                null;
+        PreparedStatement preparedStatement = null;
         try {
             preparedStatement = connection.prepareStatement("DELETE FROM Person WHERE id=?");
             preparedStatement.setInt(1, id);
