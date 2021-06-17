@@ -96,10 +96,6 @@ public class PersonDAO {
 
     public void save(Person person){
         try {
-            if (!regExValidator.emailValidate(person.getEmail())){
-                throw  new MyEmailValidException("Incorrect email");
-            }
-
             openConnection();
             PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO Person(name, age, email) VALUES(?,?,?)");
             //preparedStatement.setInt(1, person.getId());
@@ -108,9 +104,8 @@ public class PersonDAO {
             preparedStatement.setString(3, person.getEmail());
             preparedStatement.executeUpdate();
             closeConnection();
-        } catch (SQLException | MyEmailValidException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
-            e.getMessage();
         }
 
 
