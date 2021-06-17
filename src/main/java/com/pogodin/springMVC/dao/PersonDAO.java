@@ -11,7 +11,7 @@ import java.util.List;
 
 @Component
 public class PersonDAO {
-
+    RegExValidator regExValidator;
 
     private static final String URL = "jdbc:postgresql://192.168.0.102:5432/first_db";
     private static final String USERNAME = "postgres";
