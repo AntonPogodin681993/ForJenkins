@@ -1,6 +1,7 @@
 package com.pogodin.springMVC.models;
 
 
+
 public class Person {
 
     private int id;
@@ -18,6 +19,7 @@ public class Person {
         this.age = age;
         this.email = email;
     }
+
 
     public int getAge() {
         return age;
